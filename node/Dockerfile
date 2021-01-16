@@ -15,5 +15,5 @@ RUN npm install
 # アプリケーションのソースをバンドルする
 COPY . .
 
-EXPOSE 3030
+EXPOSE 3030 443
 CMD [ "node", "index.js"]
