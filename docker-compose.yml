@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  node:
+    build: ./node
+    networks:
+      - nginx_network
+    expose:
+      - 3030
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 8080:80
+    depends_on:
+      - node
+    networks:
+      - nginx_network
+
+networks:
+  nginx_network:
+    driver: bridge
