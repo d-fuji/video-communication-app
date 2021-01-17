@@ -14,7 +14,7 @@ const messages = document.getElementsByClassName('messages')[0]
 const peer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
-  port: '8080'
+  port: '80'
 })
 
 getMedia(constraints)
